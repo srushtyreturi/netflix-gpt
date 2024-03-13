@@ -19,6 +19,16 @@
  - Sign up user displayName and profile picture update
  - If the user is not logged in Redirect /browse to Login Page and vice-versa
  - Unsubscribed to the onAuthStateChanged callback
+ - Added hardcoded values to the constants file
+ - Register to TMDB API & create an app & get access token
+ - Get data from TMDB now playing movies list API
+ - Custom Hook for Now playing Movies
+ - Create movieSlice and update store with movies data
+ - Divide the browse page into MainContainer and SecondaryContainer
+ - Fetch data for trailer video
+ - Update store with trailer video data
+ - Embedded the Youtube video and made it autoplay in mute mode
+ - Used Tailwind classes in MainContainer of the Browse page
 
  # Features
 
