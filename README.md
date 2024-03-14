@@ -29,6 +29,11 @@
  - Update store with trailer video data
  - Embedded the Youtube video and made it autoplay in mute mode
  - Used Tailwind classes in MainContainer of the Browse page
+ - Built Secondary Component
+ - Built Movie List and Movie Card
+ - TMDB Image CDN URL
+ - Made the Browse Page similar to Netflix with TailwindCSS
+ - usePopularMovies, useTrendingMovies, useUpcomingMovies custom hooks
 
  # Features
 
