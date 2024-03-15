@@ -10,7 +10,7 @@ import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import { addUser } from "../utils/userSlice";
 import { useDispatch } from "react-redux";
-import { PROFILE_AVATAR } from "../utils/constants";
+import { BG_URL, PROFILE_AVATAR } from "../utils/constants";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -44,7 +44,6 @@ const Login = () => {
         .then((userCredential) => {
           // Signed up
           const user = userCredential.user;
-          console.log(user);
           updateProfile(user, {
             displayName: name,
             photoURL: PROFILE_AVATAR,
@@ -60,7 +59,6 @@ const Login = () => {
                   photoURL: photoURL,
                 })
               );
-              console.log(user);
               navigate("/browse");
             })
             .catch((error) => {
@@ -82,7 +80,6 @@ const Login = () => {
       )
         .then((userCredential) => {
           const user = userCredential.user;
-          console.log(user);
           navigate("/browse");
         })
         .catch((error) => {
@@ -99,7 +96,7 @@ const Login = () => {
       <div className="absolute">
         <img
           className="filter brightness-50"
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/93da5c27-be66-427c-8b72-5cb39d275279/fa6f97d9-245e-43d7-bb56-af27cbf6d656/US-en-20240226-popsignuptwoweeks-perspective_alpha_website_large.jpg"
+          src={BG_URL}
           alt="background-img"
         />
       </div>

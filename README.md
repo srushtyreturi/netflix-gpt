@@ -34,6 +34,9 @@
  - TMDB Image CDN URL
  - Made the Browse Page similar to Netflix with TailwindCSS
  - usePopularMovies, useTrendingMovies, useUpcomingMovies custom hooks
+ - GPT search Feature
+ - GPT Search Page
+ - GPT Search Bar
 
  # Features
 
