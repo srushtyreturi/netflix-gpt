@@ -6,9 +6,9 @@ import { BG_URL } from "../utils/constants";
 const GptSearch = () => {
   return (
     <div>
-      <div className="absolute -z-10">
+      <div className="fixed -z-10">
         <img
-          className="filter brightness-50"
+          className="h-screen object-cover md:h-auto md:object-none filter brightness-50"
           src={BG_URL}
           alt="background-img"
         />

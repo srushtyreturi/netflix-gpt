@@ -37,6 +37,11 @@
  - GPT search Feature
  - GPT Search Page
  - GPT Search Bar
+ - Get OpenAI API key, Gpt Search API call
+ - Fetched gptMovieSuggestions from TMDB
+ - Created gptSlice and added gpt suggested movie data
+ - Reused MovieList component to make movie suggestion container
+ - Memoization and Made website responsive
 
  # Features
 

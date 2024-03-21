@@ -4,12 +4,13 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser, removeUser } from "../utils/userSlice";
-import { LOGO } from "../utils/constants";
+import { GPT_KEY, LOGO } from "../utils/constants";
 import { addShowGptSearch } from "../utils/gptSlice";
 
 const Header = () => {
   const navigate = useNavigate();
   const user = useSelector((store) => store.user);
+  const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -52,17 +53,21 @@ const Header = () => {
   };
 
   return (
-    <div className="absolute flex w-screen px-8 py-2 bg-gradient-to-b from-black z-10 justify-between">
-      <img className="w-44" src={LOGO} alt="Netflix Logo" />
+    <div className="absolute flex flex-col md:flex-row w-screen px-8 py-2 bg-gradient-to-b from-black z-10 justify-between">
+      <img className="w-44 mx-auto md:mx-0" src={LOGO} alt="Netflix Logo" />
       {user && (
-        <div className="flex p-2">
+        <div className="flex p-2 justify-between">
           <button
             className="px-4 py-2 mx-4 my-2 bg-[#00ac7f] rounded-lg text-white font-bold"
             onClick={handleGptToggle}
           >
-            GPT Search
+            {showGptSearch ? "Browse Page" : "GPT Search"}
           </button>
-          <img className="w-12 h-12" src={user?.photoURL} alt="userIcon" />
+          <img
+            className="hidden md:block w-12 h-12"
+            src={user?.photoURL}
+            alt="userIcon"
+          />
           <button className="font-bold text-white" onClick={handleSignOut}>
             (Sign Out)
           </button>
